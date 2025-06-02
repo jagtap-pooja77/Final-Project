@@ -11,7 +11,7 @@ import com.example.artisan.repository.AdminRepository;
 @Service
 public class AdminService {
 
-     @Autowired
+    @Autowired
     AdminRepository repo;
 
     // create admin
@@ -57,14 +57,13 @@ public class AdminService {
 
     // delete admin
     public String deleteAdmin(Long id) {
-        try{
-        repo.deleteById(id);
-        return "Successfully Admin deleted";
-        }catch(Exception e){
+        try {
+            repo.deleteById(id);
+            return "Successfully Admin deleted";
+        } catch (Exception e) {
             e.getMessage();
         }
-         return "Successfully Admin deleted";
+        return "Successfully Admin deleted";
     }
-
 
 }
